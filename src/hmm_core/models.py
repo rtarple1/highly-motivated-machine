@@ -2,7 +2,13 @@ from dataclasses import dataclass
 from datetime import datetime
 from enum import Enum
 
-
+@dataclass(frozen=True)
+class Asset:
+    asset_id: str
+    symbol: str
+    name: str
+    display_name: str | None = None
+    
 class CatalystClassification(str, Enum):
     CONFIRMED = "confirmed"
     PROBABLE = "probable"
@@ -31,3 +37,4 @@ class Evidence:
     source_url: str
     retrieved_at: datetime
     primary_source: bool
+
