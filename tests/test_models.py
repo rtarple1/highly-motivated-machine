@@ -10,6 +10,7 @@ def test_volume_to_market_cap():
         volume_24h_usd=20_000_000,
         market_cap_usd=100_000_000,
     )
+    
     assert obs.volume_to_market_cap == 0.2
 
 
@@ -20,4 +21,23 @@ def test_volume_to_market_cap_without_market_cap():
         price_usd=1.0,
         volume_24h_usd=20_000_000,
     )
+    
     assert obs.volume_to_market_cap is None
+    
+def test_market_observation_stores_extended_market_data():
+    obs = MarketObservation(
+        asset_id="BTC",
+        observed_at=datetime.now(timezone.utc),
+        price_usd=100_000,
+        volume_24h_usd=40_000_000_000,
+        market_cap_usd=2_000_000_000_000,
+        fdv_usd=2_100_000_000_000,
+        circulating_supply=20_000_000,
+        max_supply=21_000_000,
+        source="test",
+    )
+        
+    assert obs.fdv_usd == 2_100_000_000_000
+    assert obs.circulating_supply == 20_000_000
+    assert obs.max_supply == 21_000_000
+    assert obs.source == "test"

@@ -22,12 +22,20 @@ class MarketObservation:
     observed_at: datetime
     price_usd: float
     volume_24h_usd: float
+    
     market_cap_usd: float | None = None
+    fdv_usd: float | None = None
+    
+    circulating_supply: float | None = None
+    max_supply: float | None = None
+    
+    source: str | None = None
 
     @property
     def volume_to_market_cap(self) -> float | None:
         if self.market_cap_usd in (None, 0):
             return None
+        
         return self.volume_24h_usd / self.market_cap_usd
 
 
