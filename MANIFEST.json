@@ -1,0 +1,29 @@
+{
+  "project": "Highly Motivated Machine",
+  "ticker_concept": "$HMM",
+  "version": "0.1",
+  "deliverables": [
+    ".env.example",
+    ".github/workflows/ci.yml",
+    ".gitignore",
+    "README.md",
+    "docs/adr/ADR-001-simulation-first.md",
+    "docs/adr/ADR-002-evidence-provenance.md",
+    "docs/adr/ADR-003-modular-providers.md",
+    "docs/architecture/DATA_MODEL.md",
+    "docs/architecture/HLD.md",
+    "docs/architecture/LLD.md",
+    "docs/portfolio/CASE_STUDY.md",
+    "docs/portfolio/DEMO_PLAN.md",
+    "docs/product/PRD.md",
+    "docs/product/PROJECT_CHARTER.md",
+    "docs/product/ROADMAP.md",
+    "docs/security/THREAT_MODEL.md",
+    "docs/whitepaper/WHITEPAPER_DRAFT.md",
+    "pyproject.toml",
+    "src/hmm_core/__init__.py",
+    "src/hmm_core/models.py",
+    "tests/test_models.py"
+  ],
+  "local_test_output": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py\", line 772, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py\", line 37, in get_or_create_client\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py\", line 124, in start_daemon\nTimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.\n\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                       [100%]\u001b[0m\n\u001b[32m\u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 0.03s\u001b[0m\u001b[0m"
+}
